@@ -1,0 +1,6 @@
+.mycard:hover {
+    background-color: #ffdddd;
+    border-style: solid;
+    border-color: #fe7878;
+    border-width: 0.2rem;
+}

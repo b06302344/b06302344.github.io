@@ -1,0 +1,42 @@
+#box {
+    height: 15vh;
+    width: calc(45vh + 10px * 2);
+    margin: calc((100vh - 15vh - 10px * 2) / 2) auto;
+    background-color: #daf4ff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.img-circle {
+    width: 15vh;
+    height: 15vh;
+    background-color: #9e9e9e80;
+    background-size: cover;
+    border-radius: 50%;
+    background-position-x: -25px;
+    display: inline-block;
+}
+
+.img-people {
+    background-image: url(https://placem.at/people?overlay_color=fff);
+}
+
+.img-places {
+    background-image: url(https://placem.at/places?overlay_color=fff);
+}
+
+.img-things {
+    background-image: url(https://placem.at/things?overlay_color=fff);
+}
+
+.separate {
+    display: inline-block;
+    width: 10px;
+}
+
+.link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}

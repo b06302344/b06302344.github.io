@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/22.css">
+
+    <script language="JavaScript">
+        function startTime() {
+            var today = new Date(); //定義日期物件   
+            var yyyy = today.getFullYear(); //通過日期物件的getFullYear()方法返回年    
+            var MM = today.getMonth() + 1; //通過日期物件的getMonth()方法返回年    
+            var dd = today.getDate(); //通過日期物件的getDate()方法返回年     
+            var hh = today.getHours(); //通過日期物件的getHours方法返回小時   
+            var mm = today.getMinutes(); //通過日期物件的getMinutes方法返回分鐘   
+            var ss = today.getSeconds(); //通過日期物件的getSeconds方法返回秒   
+            // 如果分鐘或小時的值小於10，則在其值前加0，比如如果時間是下午3點20分9秒的話，則顯示15：20：09   
+            MM = checkTime(MM);
+            dd = checkTime(dd);
+            mm = checkTime(mm);
+            ss = checkTime(ss);
+
+            document.getElementById('nowDateTimeSpan').innerHTML = yyyy + "-" + MM + "-" + dd + "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  " + hh + ":" + mm + ":" + ss;
+            setTimeout('startTime()', 1000); //每一秒中重新載入startTime()方法 
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        $('.carousel').carousel({
+            interval: false
+        })
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body onload="startTime()">
+    <div id="coat">
+        <div style="height: 35px;"></div>
+        <div class="strip box">
+            <font color="#FFFFFF"><span id="nowDateTimeSpan"></span></font>
+            <div id="icon" style="width: 100px;height: 15px;display: inline-block;float: right;"></div>
+        </div>
+        <div class="container" style="width: 480px;height=420">
+            <div class="carousel slide" id="carousel-demo">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-demo" data-slide-to="1"></li>
+                    <li data-target="#carousel-demo" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="page box ">
+                            <div class="app " id="ig">
+                                <a class="link " href="https://www.instagram.com/?hl=zh-tw " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="fb">
+                                <a class="link " href="https://www.facebook.com/ " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="messenger">
+                                <a class="link " href="https://www.messenger.com/ " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="line">
+                                <a class="link " href="https://line.me/zh-hant/ " target="_blank "></a>
+                            </div>
+
+                            <div class="bax row">
+                            </div>
+                            <div class="app " id="office">
+                                <a class="link " href="https://www.microsoft.com/zh-tw/microsoft-365/mobile/microsoft-365-mobile-apps-for-android" target="_blank "></a>
+                            </div>
+
+                            <div class="separate "></div>
+                            <div class="app " id="youtube">
+                                <a class="link " href="https://www.youtube.com/?gl=TW&hl=zh-tw " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="map">
+                                <a class="link " href="https://www.google.com.tw/maps/ " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="street">
+                                <a class="link " href="https://www.jkos.com/ " target="_blank "></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="page box ">
+
+
+                            <div class="bax row">
+                            </div>
+
+                            <div class="app " id="booking">
+                                <a class="link " href="https://www.booking.com/" target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="agoda">
+                                <a class="link " href="https://www.agoda.com/zh-tw/ " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="linepay">
+                                <a class="link " href="https://pay.line.me/portal/tw/main" target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="shopee">
+                                <a class="link " href="https://shopee.tw/ " target="_blank "></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="page box ">
+                            <div class="app " id="bau">
+                                <a class="link " href="https://mpage.taobao.com/hd/download.html " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="familymart">
+                                <a class="link " href="https://www.family.com.tw/ " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="adobe">
+                                <a class="link " href="https://www.adobe.com/tw/ " target="_blank "></a>
+                            </div>
+                            <div class="separate "></div>
+                            <div class="app " id="drive">
+                                <a class="link " href="https://www.google.com/intl/zh-TW_ALL/drive/ " target="_blank "></a>
+                            </div>
+
+                            <div class="bax row">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <a href="#carousel-demo" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#carousel-demo" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="app" id="gmail">
+                <a class="link " href="https://mail.google.com/ " target="_blank "></a>
+            </div>
+            <div class="separate"></div>
+            <div class="app" id="cal">
+                <a class="link" href="http://jisuanqizhongxin.com/zh-tw/%E6%AD%A3%E5%B8%B8/%E7%A7%91%E5%AD%B8%E8%A8%88%E7%AE%97%E6%A9%9F/%E5%85%8D%E8%B2%BB%E7%B7%9A%E4%B8%8A%E7%A7%91%E5%AD%B8%E8%A8%88%E7%AE%97%E6%A9%9F " target="_blank "></a>
+            </div>
+            <div class="separate"></div>
+            <div class="app" id="weather">
+                <a class="link" href="https://www.cwb.gov.tw/V8/C/W/week.html " target="_blank "></a>
+            </div>
+            <div class="separate"></div>
+            <div class="app" id="play">
+                <a class="link" href="https://play.google.com/store/apps?utm_source=apac_med&utm_medium=hasem&utm_content=Apr0120&utm_campaign=Evergreen&pcampaignid=MKT-DR-apac-tw-1003227-med-hasem-py-Evergreen-Apr0120-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700011378110951_creativeid_416436870169_device_c_kwd_kwd-32730629319_geoid_9040379_network_g&gclid=CjwKCAjw-YT1BRAFEiwAd2WRtmPmm7OwOduypm8-tGTYT7UBm6ru2Tn38VsHFw4mEJcGA5f3AKCv1BoCZOcQAvD_BwE&gclsrc=aw.ds "
+                    target="_blank"></a>
+            </div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="mybuttom"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

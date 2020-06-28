@@ -21,7 +21,9 @@ $(() => {
         n = +$('#input_number_people').val();
         for (let i = 0; i < n; i++) {
 
-            $('#people>form').append('請輸入名稱：' + '<input type="text" name="人名" style="background-clip: padding-box;border: 1px solid #ced4da;border-radius: .25rem;"></br>')
+
+            $('#people>form').append('請輸入名稱：<input type="text" name="人名" class="col-sm-6" style="background-clip: padding-box;border: 1px solid #ced4da;border-radius: .25rem;"></br>')
+
 
         };
         $('#people').fadeIn(1000);
@@ -69,10 +71,10 @@ $(() => {
             $form.append(' ' + people_array[i] + '<br>')
 
         }
-        $input = $('<input>').attr('type', 'text').addClass('trade').attr('style', 'background-clip: padding-box;border: 1px solid #ced4da;border-radius: .25rem;')
+        $input = $('<input>').attr('type', 'text').addClass('trade col-sm-6').attr('style', 'background-clip: padding-box;border: 1px solid #ced4da;border-radius: .25rem;')
         $form.append('交易原因：')
         $form.append($input)
-        $input = $('<input>').attr('type', 'number').addClass('amount').attr('style', 'background-clip: padding-box;border: 1px solid #ced4da;border-radius: .25rem;')
+        $input = $('<input>').attr('type', 'number').addClass('amount col-sm-6').attr('style', 'background-clip: padding-box;border: 1px solid #ced4da;border-radius: .25rem;')
         $form.append('<br>金額　　：')
         $form.append($input)
 

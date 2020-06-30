@@ -61,9 +61,9 @@ $(() => {
         $div_ac.append('付款人：' + '<select>' + $select.html() + '<select>' + '<br>' + '參與人：')
 
         $form = $('<form>')
-            $input = $('<input>').attr('name', 'clickAll').addClass('clickAll').attr('type', 'checkbox')
-            $form.append($input)
-            $form.append(' 全選<br>')
+        $input = $('<input>').attr('name', 'clickAll').addClass('clickAll').attr('type', 'checkbox')
+        $form.append($input)
+        $form.append(' 全選<br>')
 
         for (let i = 0; i < people_array.length; i++) {
             $input = $('<input>').attr('type', 'checkbox').attr('value', people_array[i]).attr('name', 'participant')
@@ -87,33 +87,32 @@ $(() => {
 
 
     $('#main_row2').on('click', '.clickAll', () => {
+        if ($(event.target).prop("checked")) {
+            $(event.target).siblings("input[name='participant']").each(function() {
+                $(this).prop("checked", true);
+            });
+        } else {
+            $(event.target).siblings("input[name='participant']").each(function() {
+                $(this).prop("checked", false);
+            });
+        };
+    });
 
-         if ($(event.target).prop("checked")) {
-             $(event.target).siblings("input[name='participant']").each(function() {
-
-                 $(this).prop("checked", true);
-             });
-         } else {
-             $(event.target).siblings("input[name='participant']").each(function() {
-                 $(this).prop("checked", false);
-             });
-
-         };
-
-     });
-
-     $('#main_row2').on('click', 'input[name="participant"]', () => {
-         //each 便利每一個元素，讓其執行該函式
-         $(event.target).siblings("input[name='participant']").each(function() {
-             if (!$(this).prop('checked')) {
-                 $(event.target).siblings("input[name='clickAll']").prop('checked', false);
-                 //有一個不滿足就 跳出該迴圈，避免執行下面
-                 return false;
-             } else {
-                 $(event.target).siblings("input[name='clickAll']").prop('checked', true);
-             }
-         })
-     })
+    $('#main_row2').on('click', 'input[name="participant"]', () => {
+        //each 便利每一個元素，讓其執行該函式
+        if (!$(event.target).prop("checked")) {
+            $(event.target).siblings("input[name='clickAll']").prop('checked', false);
+        }
+        $(event.target).siblings("input[name='participant']").each(function() {
+            if (!$(this).prop('checked')) {
+                $(event.target).siblings("input[name='clickAll']").prop('checked', false);
+                //有一個不滿足就 跳出該迴圈，避免執行下面
+                return false;
+            } else {
+                $(event.target).siblings("input[name='clickAll']").prop('checked', true);
+            }
+        })
+    })
 
 
 

@@ -85,7 +85,7 @@ $(() => {
         $('#main_row2>.activity').show(1000)
     })
 
-
+    //點選全選
     $('#main_row2').on('click', '.clickAll', () => {
         if ($(event.target).prop("checked")) {
             $(event.target).siblings("input[name='participant']").each(function() {
@@ -97,12 +97,10 @@ $(() => {
             });
         };
     });
-
+    //判斷是否全選
     $('#main_row2').on('click', 'input[name="participant"]', () => {
         //each 便利每一個元素，讓其執行該函式
-        if (!$(event.target).prop("checked")) {
-            $(event.target).siblings("input[name='clickAll']").prop('checked', false);
-        }
+
         $(event.target).siblings("input[name='participant']").each(function() {
             if (!$(this).prop('checked')) {
                 $(event.target).siblings("input[name='clickAll']").prop('checked', false);
@@ -112,6 +110,10 @@ $(() => {
                 $(event.target).siblings("input[name='clickAll']").prop('checked', true);
             }
         })
+
+        if (!$(event.target).prop("checked")) {
+            $(event.target).siblings("input[name='clickAll']").prop('checked', false);
+        }
     })
 
 

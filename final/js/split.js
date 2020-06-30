@@ -61,9 +61,9 @@ $(() => {
         $div_ac.append('付款人：' + '<select>' + $select.html() + '<select>' + '<br>' + '參與人：')
 
         $form = $('<form>')
-            /*$input = $('<input>').attr('name', 'clickAll').addClass('clickAll').attr('type', 'checkbox')
+            $input = $('<input>').attr('name', 'clickAll').addClass('clickAll').attr('type', 'checkbox')
             $form.append($input)
-            $form.append(' 全選<br>')*/
+            $form.append(' 全選<br>')
 
         for (let i = 0; i < people_array.length; i++) {
             $input = $('<input>').attr('type', 'checkbox').attr('value', people_array[i]).attr('name', 'participant')

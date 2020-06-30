@@ -132,7 +132,7 @@ $(() => {
             total[$(this).find('select').val()] += $amount
                 //console.log(total)
 
-            let m = $(this).find("input[type='checkbox']:checked").length
+            let m = $(this).find("input[name='participant']:checked").length
 
             $(this).find("input[name='participant']:checked").each(function(index) {
                     total[$(this).val()] -= ($amount / m)

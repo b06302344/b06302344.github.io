@@ -86,9 +86,9 @@ $(() => {
     })
 
 
-    /* $('#main_row2').on('click', '.clickAll', () => {
+    $('#main_row2').on('click', '.clickAll', () => {
 
-         if ($("#main_row2 .clickAll").prop("checked")) {
+         if ($(event.target).prop("checked")) {
              $(event.target).siblings("input[name='participant']").each(function() {
 
                  $(this).prop("checked", true);
@@ -113,7 +113,7 @@ $(() => {
                  $(event.target).siblings("input[name='clickAll']").prop('checked', true);
              }
          })
-     })*/
+     })
 
 
 
